@@ -1,13 +1,15 @@
-# This script calculates users monthly savings
-monthlyIncome = input("Enter your monthly income:")
-monthlyIncome = int(monthlyIncome)
-monthlyExpenses = input("Enter your total monthly expenses:")
-monthlyExpenses = int(monthlyExpenses)
+# This script calculates users' monthly savings and projected savings after one year with interest
+
+# Getting user input
+monthly_income = float(input("Enter your monthly income: "))
+monthly_expenses = float(input("Enter your total monthly expenses: "))
 
 # Calculate monthly savings
-monthlySavings = monthlyIncome - monthlyExpenses
+monthly_savings = monthly_income - monthly_expenses
 
-projectedSavings = monthlySavings * 12 + (monthlySavings * 12 * 0.05)
+# Calculate projected savings after one year, with 5% interest
+projected_savings = monthly_savings * 12 + (monthly_savings * 12 * 0.05)
 
-print('Your monthly savings are', monthlySavings, '.')
-print('Projected savings after one year, with interest, is:', projectedSavings, '.')
+# Display results
+print(f"Your monthly savings are: {monthly_savings}.")
+print(f"Projected savings after one year with 5% interest: {projected_savings}.")
